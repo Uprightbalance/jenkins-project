@@ -35,10 +35,16 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version> <!-- Updated to a newer version -->
+                <version>3.10.1</version>
                 <configuration>
-                    <release>17</release> <!-- Ensures proper Java 17 compatibility -->
+                    <release>17</release>
                 </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version> <!-- or latest version -->
             </plugin>
         </plugins>
     </build>
