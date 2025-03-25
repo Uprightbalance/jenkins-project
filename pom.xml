@@ -11,10 +11,18 @@
     <url>http://maven.apache.org</url>
 
     <properties>
+        <maven.compiler.release>17</maven.compiler.release>
         <docker.image.prefix>kammana</docker.image.prefix>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.oracle.bedrock</groupId>
+            <artifactId>bedrock-runtime-maven</artifactId>
+            <version>5.1.2</version>
+        </dependency>
+
+       <dependencies>
         <dependency>
             <groupId>com.oracle.bedrock</groupId>
             <artifactId>bedrock-runtime-maven</artifactId>
@@ -28,6 +36,25 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <release>17</release>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version> <!-- or latest version -->
+            </plugin>
+        </plugins>
+    </build>
 
     <distributionManagement>
         <snapshotRepository>
