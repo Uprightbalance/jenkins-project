@@ -5,9 +5,8 @@
 
     <groupId>in.RAHAM</groupId>
     <artifactId>NETFLIX</artifactId>
-    <version>1.2.2</version>
     <packaging>war</packaging>
-
+    <version>1.2.2</version>
     <name>Java Home myweb</name>
     <url>http://maven.apache.org</url>
 
@@ -45,13 +44,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.4.0</version>
-            </plugin>
-
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.9.1.2184</version>
+                <version>3.4.0</version> <!-- or latest version -->
             </plugin>
         </plugins>
     </build>
@@ -75,3 +68,4 @@
         </pluginRepository>
     </pluginRepositories>
 </project>
+
